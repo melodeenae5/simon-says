@@ -8,11 +8,19 @@
 	</head>
 	<body>
 		<div class="board">
-			<button class="square green gflash" id="0"></button>
-			<button class="square red rflash" id="1"></button>
-			<button class="square yellow yflash" id="2"></button>
-			<button class="square blue bflash" id="3"></button>
+			<button class="square green" id="0"></button>
+			<button class="square red" id="1"></button>
+			<button class="square yellow" id="2"></button>
+			<button class="square blue" id="3"></button>
+			<div class="scoreboard">Score: <span id="score"></span></div> 
+			<div class="scoreboard">High Score: <span id="highScore"></span></div>
 		</div>
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<button class="play">Play Game!</button>
+			</div>
+		</div>
+		
 		<script src="script.js"></script>
 	</body>
 </html>

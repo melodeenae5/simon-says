@@ -22,7 +22,12 @@
 .blue {
 	background-color: blue;
 }
-.gflash {
+.scoreboard {
+	background-color: lightgray;
+	height: 25px;
+}
+
+.flash0 {
 	animation: gflash 1300ms 1;
 }
 @keyframes gflash {
@@ -39,7 +44,7 @@
 		box-shadow: 0 0 3px green;
 	}
 }
-.rflash {
+.flash1 {
 	animation: rflash 1300ms 1;
 }
 @keyframes rflash {
@@ -56,7 +61,7 @@
 		box-shadow: 0 0 3px #e01000;
 	}
 }
-.yflash {
+.flash2 {
 	animation: yflash 1300ms 1;
 }
 @keyframes yflash {
@@ -73,7 +78,7 @@
 		box-shadow: 0 0 3px yellow;
 	}
 }
-.bflash {
+.flash3 {
 	animation: bflash 1300ms 1;
 }
 @keyframes bflash {
@@ -82,11 +87,37 @@
 		box-shadow: 0 0 3px blue;
 	}
 	50% {
-		background-color: #126FE0;
-		box-shadow: 0 0 10px #126FE0;
+		background-color: #126fe0;
+		box-shadow: 0 0 10px #126fe0;
 	}
 	100% {
 		background-color: blue;
 		box-shadow: 0 0 3px blue;
 	}
+}
+
+/*got this code from w3schools*/
+.modal {
+	display: none; /* Hidden by default*/
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.modal-content {
+	background-color: #fefefe;
+	margin: 15% auto; /* 15% from the top and centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%; /* Could be more or less, depending on screen size */
+}
+.play {
+	color: red;
+	font-size: 28px;
+	font-weight: bold;
 }
