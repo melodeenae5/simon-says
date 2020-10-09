@@ -14,11 +14,79 @@
 	background-color: green;
 }
 .red {
-	background-color: red;
+	background-color: #e01000;
 }
 .yellow {
 	background-color: yellow;
 }
 .blue {
 	background-color: blue;
+}
+.gflash {
+	animation: gflash 1300ms 1;
+}
+@keyframes gflash {
+	0% {
+		background-color: green;
+		box-shadow: 0 0 3px green;
+	}
+	50% {
+		background-color: #60de02;
+		box-shadow: 0 0 10px #60de02;
+	}
+	100% {
+		background-color: green;
+		box-shadow: 0 0 3px green;
+	}
+}
+.rflash {
+	animation: rflash 1300ms 1;
+}
+@keyframes rflash {
+	0% {
+		background-color: #e01000;
+		box-shadow: 0 0 3px #e01000;
+	}
+	50% {
+		background-color: #f56149;
+		box-shadow: 0 0 10px #f56149;
+	}
+	100% {
+		background-color: #e01000;
+		box-shadow: 0 0 3px #e01000;
+	}
+}
+.yflash {
+	animation: yflash 1300ms 1;
+}
+@keyframes yflash {
+	0% {
+		background-color: yellow;
+		box-shadow: 0 0 3px yellow;
+	}
+	50% {
+		background-color: #f9ffc9;
+		box-shadow: 0 0 10px #f9ffc9;
+	}
+	100% {
+		background-color: yellow;
+		box-shadow: 0 0 3px yellow;
+	}
+}
+.bflash {
+	animation: bflash 1300ms 1;
+}
+@keyframes bflash {
+	0% {
+		background-color: blue;
+		box-shadow: 0 0 3px blue;
+	}
+	50% {
+		background-color: #126FE0;
+		box-shadow: 0 0 10px #126FE0;
+	}
+	100% {
+		background-color: blue;
+		box-shadow: 0 0 3px blue;
+	}
 }
