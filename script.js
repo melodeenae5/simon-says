@@ -66,7 +66,10 @@ function listen2User(event) {
 			gameOver();
 		}
 		if (userSequence.length >= theSequence.length) {
-			checkSequence();
+			// checkSequence();
+			updateScore();
+			userSequence = [];
+			playGame();
 		}
 	}
 }
@@ -83,22 +86,22 @@ function checkMove() {
 }
 
 //checks user input against theSequence array
-function checkSequence() {
-	let isAccurate = true;
-	for (let i = 0; i < theSequence.length; i++) {
-		if (userSequence[i] !== theSequence[i]) {
-			isAccurate = false;
-			break;
-		}
-	}
-	if (isAccurate) {
-		updateScore();
-		userSequence = [];
-		playGame();
-	} else {
-		gameOver();
-	}
-}
+// function checkSequence() {
+// 	let isAccurate = true;
+// 	for (let i = 0; i < theSequence.length; i++) {
+// 		if (userSequence[i] !== theSequence[i]) {
+// 			isAccurate = false;
+// 			break;
+// 		}
+// 	}
+// 	if (isAccurate) {
+// 		updateScore();
+// 		userSequence = [];
+// 		playGame();
+// 	} else {
+// 		gameOver();
+// 	}
+// }
 
 //end the game
 function gameOver() {
