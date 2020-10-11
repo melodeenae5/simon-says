@@ -74,6 +74,7 @@ function checkSequence() {
 	for (let i = 0; i < theSequence.length; i++) {
 		if (userSequence[i] !== theSequence[i]) {
 			isAccurate = false;
+			break;
 		}
 	}
 	if (isAccurate) {
