@@ -26,7 +26,16 @@
 	background-color: lightgray;
 	height: 25px;
 }
+.restart {
+	height: 50px;
+	width 50px;
+	text-align: center;
+	display: none;
+}
 
+/*found some code for the animations on w3docs article called
+"How to Create Flashing/Glowing Button Using Animations in CSS3"
+ */
 .flash0 {
 	animation: gflash 750ms 1;
 }
