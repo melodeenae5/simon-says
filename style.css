@@ -28,7 +28,7 @@
 }
 
 .flash0 {
-	animation: gflash 1300ms 1;
+	animation: gflash 750ms 1;
 }
 @keyframes gflash {
 	0% {
@@ -45,7 +45,7 @@
 	}
 }
 .flash1 {
-	animation: rflash 1300ms 1;
+	animation: rflash 750ms 1;
 }
 @keyframes rflash {
 	0% {
@@ -62,7 +62,7 @@
 	}
 }
 .flash2 {
-	animation: yflash 1300ms 1;
+	animation: yflash 750ms 1;
 }
 @keyframes yflash {
 	0% {
@@ -79,7 +79,7 @@
 	}
 }
 .flash3 {
-	animation: bflash 1300ms 1;
+	animation: bflash 750ms 1;
 }
 @keyframes bflash {
 	0% {
