@@ -62,10 +62,24 @@ function listen2User(event) {
 			button.parentNode.replaceChild(element, button);
 		}, 1000);
 		userSequence.push(parseInt(button.id));
+		if (!checkMove()) {
+			gameOver();
+		}
 		if (userSequence.length >= theSequence.length) {
 			checkSequence();
 		}
 	}
+}
+
+function checkMove() {
+	let isAccurate = true;
+	for (let i = 0; i < userSequence.length; i++) {
+		if (userSequence[i] !== theSequence[i]) {
+			isAccurate = false;
+			break;
+		}
+	}
+	return isAccurate;
 }
 
 //checks user input against theSequence array
@@ -82,10 +96,16 @@ function checkSequence() {
 		userSequence = [];
 		playGame();
 	} else {
-		alert(`Game over. Your score is ${score.innerText}`);
-		restartButton.style.display = 'block';
+		gameOver();
 	}
 }
+
+//end the game
+function gameOver() {
+	alert(`Game over. Your score is ${score.innerText}`);
+	restartButton.style.display = 'block';
+}
+
 //event listener for restart button
 restartButton.addEventListener('click', restart);
 //resets the game to play again
