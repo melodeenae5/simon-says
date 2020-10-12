@@ -6,7 +6,9 @@ const playButton = document.querySelector('.play');
 const gameBoard = document.querySelector('.board');
 const score = document.getElementById('score');
 const highScore = document.getElementById('highScore');
-highScore.innerText = sessionStorage.getItem('score');
+highScore.innerText = sessionStorage.getItem('score')
+	? sessionStorage.getItem('score')
+	: 0;
 const restartButton = document.querySelector('.restart');
 
 //found out how to add audio from stackOverflow
