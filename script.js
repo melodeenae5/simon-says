@@ -9,7 +9,6 @@ const highScore = document.getElementById('highScore');
 highScore.innerText = sessionStorage.getItem('score')
 	? sessionStorage.getItem('score')
 	: 0;
-const restartButton = document.querySelector('.restart');
 
 //found out how to add audio from stackOverflow
 const greenSound = new Audio('EGreen.wav');
@@ -131,7 +130,6 @@ function listen2User(event) {
 		if (!checkMove()) {
 			gameOver();
 		} else if (userSequence.length >= theSequence.length) {
-			console.log('playing again');
 			updateScore();
 			userSequence = [];
 			playGame();
@@ -154,18 +152,15 @@ function checkMove() {
 function gameOver() {
 	saveHighScore(parseInt(score.innerText));
 	alert(`Game over. Your score is ${score.innerText}`);
-	restartButton.style.display = 'block';
+	restart();
 }
 
-//event listener for restart button
-restartButton.addEventListener('click', restart);
 //resets the game to play again
 function restart() {
 	theSequence = [];
 	userSequence = [];
 	score.innerText = `0`;
 	modal.style.display = 'block';
-	restartButton.style.display = 'none';
 }
 
 //updates score
