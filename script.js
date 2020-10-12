@@ -70,12 +70,12 @@ function playSequence() {
 				case 3:
 					blueSound.currentTime = 0;
 			}
-		}, 1000);
+		}, 750);
 		i++;
 		if (i >= theSequence.length) {
 			clearInterval(flash);
 		}
-	}, 1500);
+	}, 1000);
 }
 
 //adds a random number to theSequence array
@@ -144,24 +144,6 @@ function checkMove() {
 	}
 	return isAccurate;
 }
-
-//checks user input against theSequence array
-// function checkSequence() {
-// 	let isAccurate = true;
-// 	for (let i = 0; i < theSequence.length; i++) {
-// 		if (userSequence[i] !== theSequence[i]) {
-// 			isAccurate = false;
-// 			break;
-// 		}
-// 	}
-// 	if (isAccurate) {
-// 		updateScore();
-// 		userSequence = [];
-// 		playGame();
-// 	} else {
-// 		gameOver();
-// 	}
-// }
 
 //end the game
 function gameOver() {
