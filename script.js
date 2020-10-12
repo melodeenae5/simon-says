@@ -130,9 +130,8 @@ function listen2User(event) {
 		userSequence.push(parseInt(button.id));
 		if (!checkMove()) {
 			gameOver();
-		}
-		if (userSequence.length >= theSequence.length) {
-			// checkSequence();
+		} else if (userSequence.length >= theSequence.length) {
+			console.log('playing again');
 			updateScore();
 			userSequence = [];
 			playGame();
