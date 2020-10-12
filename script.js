@@ -6,6 +6,10 @@ const playButton = document.querySelector('.play');
 const gameBoard = document.querySelector('.board');
 const score = document.getElementById('score');
 const restartButton = document.querySelector('.restart');
+const greenSound = new Audio('EGreen.wav');
+const redSound = new Audio('ARed.wav');
+const yellowSound = new Audio('CSharpYellow.wav');
+const blueSound = new Audio('EBlue.wav');
 
 //modal
 window.addEventListener('load', function () {
@@ -35,9 +39,37 @@ function playSequence() {
 		const square = document.getElementById(theSequence[i]);
 		const element = square.cloneNode(true);
 		square.classList.add(`flash${theSequence[i]}`);
+		const squareID = square.id;
+		switch (parseInt(squareID)) {
+			case 0:
+				greenSound.play();
+				break;
+			case 1:
+				redSound.play();
+				break;
+			case 2:
+				yellowSound.play();
+				break;
+			case 3:
+				blueSound.play();
+				break;
+		}
 		setTimeout(function () {
 			square.classList.remove(`flash${theSequence[i]}`);
 			square.parentNode.replaceChild(element, square);
+			switch (squareID) {
+				case 0:
+					greenSound.currentTime = 0;
+					break;
+				case 1:
+					redSound.currentTime = 0;
+					break;
+				case 2:
+					yellowSound.currentTime = 0;
+					break;
+				case 3:
+					blueSound.currentTime = 0;
+			}
 		}, 1000);
 		i++;
 		if (i >= theSequence.length) {
@@ -57,9 +89,37 @@ function listen2User(event) {
 		const button = document.getElementById(`${event.target.id}`);
 		const element = button.cloneNode(true);
 		button.classList.add(`flash${button.id}`);
+		const buttonID = button.id;
+		switch (parseInt(buttonID)) {
+			case 0:
+				greenSound.play();
+				break;
+			case 1:
+				redSound.play();
+				break;
+			case 2:
+				yellowSound.play();
+				break;
+			case 3:
+				blueSound.play();
+				break;
+		}
 		setTimeout(function () {
 			button.classList.remove(`flash${button.id}`);
 			button.parentNode.replaceChild(element, button);
+			switch (buttonID) {
+				case 0:
+					greenSound.currentTime = 0;
+					break;
+				case 1:
+					redSound.currentTime = 0;
+					break;
+				case 2:
+					yellowSound.currentTime = 0;
+					break;
+				case 3:
+					blueSound.currentTime = 0;
+			}
 		}, 1000);
 		userSequence.push(parseInt(button.id));
 		if (!checkMove()) {
