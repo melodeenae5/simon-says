@@ -5,7 +5,11 @@ const modal = document.getElementById('myModal');
 const playButton = document.querySelector('.play');
 const gameBoard = document.querySelector('.board');
 const score = document.getElementById('score');
+const highScore = document.getElementById('highScore');
+highScore.innerText = sessionStorage.getItem('score');
 const restartButton = document.querySelector('.restart');
+
+//found out how to add audio from stackOverflow
 const greenSound = new Audio('EGreen.wav');
 const redSound = new Audio('ARed.wav');
 const yellowSound = new Audio('CSharpYellow.wav');
@@ -147,6 +151,7 @@ function checkMove() {
 
 //end the game
 function gameOver() {
+	saveHighScore(parseInt(score.innerText));
 	alert(`Game over. Your score is ${score.innerText}`);
 	restartButton.style.display = 'block';
 }
@@ -165,4 +170,13 @@ function restart() {
 //updates score
 function updateScore() {
 	score.innerText = `${theSequence.length}`;
+}
+
+//save high score to session storage
+function saveHighScore(score) {
+	if (score > parseInt(highScore.innerText)) {
+		sessionStorage.clear();
+		sessionStorage.setItem('score', `${score}`);
+		highScore.innerText = sessionStorage.getItem('score');
+	}
 }
