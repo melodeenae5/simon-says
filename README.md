@@ -1,5 +1,7 @@
 # Project 1
 
+![screenshot](screenshot.png)
+
 ### Technologies used
 
 -HTML
@@ -21,6 +23,8 @@ Clone this repo. Open the HTML file in a browser manually or with a live server.
 -As a player, I want the buttons to make sounds when the flash or when they are clicked, to simulate a real Simon game experience.
 
 ### Wireframes
+
+![wireframes](wireframe.png)
 
 ### Problems/Hurdles
 
